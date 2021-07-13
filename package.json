@@ -1,0 +1,33 @@
+{
+  "name": "microverse-js",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet) ![](https://img.shields.io/badge/Academic-blue) ![](https://img.shields.io/badge/HTML-red) ![](https://img.shields.io/badge/JavaScript-yellow)",
+  "private": "true",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4nielJ/microverse-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D4nielJ/microverse-JS/issues"
+  },
+  "homepage": "https://github.com/D4nielJ/microverse-JS#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.7",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
