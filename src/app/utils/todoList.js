@@ -1,6 +1,6 @@
 import Task from './task.js';
 
-export default class {
+export default class TodoList {
   constructor() {
     this.index = 0;
     this.arr = [];

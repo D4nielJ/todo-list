@@ -1,6 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+$primary-color: #2e8ae6;
+$gray: rgb(245, 245, 245);
+$white: #fff;
+
 *,
 *::after,
 *::before {
@@ -40,7 +44,7 @@ body {
 }
 
 .logo {
-  background: #2e8ae6;
+  background: $primary-color;
   border-radius: 3px;
   padding: 2rem;
   color: #fff;
@@ -54,9 +58,11 @@ body {
   font-size: 1.5rem;
   padding: 0;
   border: none;
+  background: $gray;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
 
   &__title {
+    background: $white;
     padding: 10px 10px 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -76,8 +82,12 @@ body {
     width: 100%;
     border: none;
     padding: 10px 20px;
-    font-style: italic;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    outline: none;
+
+    &::placeholder {
+      font-style: italic;
+    }
   }
 
   button {
@@ -94,10 +104,35 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 5px 10px 20px;
+    background: $white;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 
-    & input {
-      margin-right: 5px;
+    &--hold {
+      background: $white;
+      opacity: 1;
+      border: $primary-color 2px solid;
+      border-radius: 5px;
+    }
+
+    &--invisible {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__completed {
+    margin-right: 5px;
+  }
+
+  &__desc {
+    border: none;
+    outline: none;
+    overflow: none;
+    min-height: 10px;
+    font-weight: 300;
+
+    &::placeholder {
+      opacity: 1;
     }
   }
 
