@@ -8,7 +8,7 @@ $white: #fff;
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -21,6 +21,7 @@ li {
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -103,9 +104,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5px 10px 20px;
+    padding: 10px 5px 10px 0;
     background: $white;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    position: relative;
 
     &--hold {
       background: $white;
@@ -116,12 +118,24 @@ body {
 
     &--invisible {
       opacity: 0;
-      visibility: hidden;
+      visibility: visible;
     }
+  }
+
+  &__target {
+    content: '';
+    position: absolute;
+    display: block;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    transform: translateY(50%);
+    z-index: 10;
   }
 
   &__completed {
     margin-right: 5px;
+    margin-left: 20px;
   }
 
   &__desc {
