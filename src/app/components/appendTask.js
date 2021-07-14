@@ -8,6 +8,6 @@ export default function (index, todoList) {
   <div class="todo-list__grab grabber">
     <span class="grabber__circle"></span>
   </div>`;
-  li.classList.add('todo-list__item')
+  li.classList.add('todo-list__item');
   return li;
 }
