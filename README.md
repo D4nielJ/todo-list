@@ -6,11 +6,11 @@
 ![](https://img.shields.io/badge/JavaScript-yellow)
 ![](https://img.shields.io/badge/SCSS-green)
 
-Add description here.
+Application development for academic purposes.
 
 ## Live Demo
 
-* [Live Demo]()
+* [Clic here 🙂](https://jolly-wing-fd7a03.netlify.app/)
 
 ## Authors
 
