@@ -20,6 +20,7 @@
   "homepage": "https://github.com/D4nielJ/microverse-JS#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "bootstrap": "^5.0.2",
     "css-loader": "^5.2.7",
     "eslint": "^7.30.0",
     "eslint-config-airbnb-base": "^14.2.1",

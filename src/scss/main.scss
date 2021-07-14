@@ -1,4 +1,145 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-    color: lightseagreen;
-    background-color: black;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(245, 245, 245);
+}
+
+.main-title {
+  padding-top: 10rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.logo {
+  background: #2e8ae6;
+  border-radius: 3px;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.card {
+  font-size: 1.5rem;
+  padding: 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0px;
+
+  &__title {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    color: rgba(0, 0, 0, 0.7);
+
+    & .fas {
+      font-size: 1.3rem;
+      color: rgba(0, 0, 0, 0.4);
+      transform: rotate(-30deg);
+      cursor: pointer;
+    }
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    font-style: italic;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  }
+
+  button {
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    width: 100%;
+    padding: 15px 20px;
+  }
+}
+
+.todo-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+
+    & .fas {
+      font-size: 1.3rem;
+      color: #2e8ae6;
+      margin-right: 3px;
+    }
+  }
+
+  &__grab {
+    width: 2rem;
+    height: 2rem;
+    justify-self: flex-end;
+  }
+}
+
+.grabber {
+  display: flex;
+  align-items: center;
+
+  &__circle {
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.2rem;
+      top: -0.7rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.2rem;
+      top: 0.7rem;
+    }
+  }
 }
