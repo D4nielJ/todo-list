@@ -57,7 +57,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
 
   &__title {
-    padding: 10px 20px;
+    padding: 10px 10px 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +72,7 @@ body {
     }
   }
 
-  input {
+  &__add-task {
     width: 100%;
     border: none;
     padding: 10px 20px;
@@ -93,13 +93,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 5px 10px 20px;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 
-    & .fas {
-      font-size: 1.3rem;
-      color: #2e8ae6;
-      margin-right: 3px;
+    & input {
+      margin-right: 5px;
     }
   }
 
@@ -113,6 +111,12 @@ body {
 .grabber {
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: move;
+  min-width: 25px;
+  min-height: 25px;
+  // background-color: brown;
+
 
   &__circle {
     display: block;
