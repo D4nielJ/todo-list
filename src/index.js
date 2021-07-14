@@ -5,8 +5,9 @@ import './scss/main.scss';
 const ul = document.querySelector('.todo-list');
 
 const todoList = new TodoList();
-todoList.addTask('Limpiar');
-todoList.addTask('Comer');
-todoList.addTask('Sacar el perro');
+todoList.addTask('Create an index.js');
+todoList.addTask('Create classes');
+todoList.addTask('Implement functionality');
+todoList.addTask('Check for errors with linters');
 
 window.onload = run(ul, todoList);
