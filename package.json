@@ -4,7 +4,7 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet) ![](https://img.shields.io/badge/Academic-blue) ![](https://img.shields.io/badge/HTML-red) ![](https://img.shields.io/badge/JavaScript-yellow)",
   "private": "true",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.js --open",
+    "start": "webpack serve --config webpack.dev.js --open --liveReload",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {

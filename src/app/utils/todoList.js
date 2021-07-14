@@ -12,5 +12,8 @@ export default class {
     this.index += 1;
   };
 
-  getTask = (index) => this.arr.filter((task) => task.index === index);
+  getTask = index => {
+    const [ task ] = this.arr.filter((task) => task.index === index);
+    return task;
+  }
 }

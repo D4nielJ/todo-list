@@ -5,4 +5,4 @@ export default function (ul, todoList) {
     const li = appendTask(i, todoList);
     ul.appendChild(li);
   }
-};
+}
