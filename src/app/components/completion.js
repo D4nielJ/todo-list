@@ -1,12 +1,11 @@
 import todoList from '../utils/todoList.js';
 
 class Completion {
-  checkboxes = Array.from(document.querySelectorAll('.todo-list__completed'));
-
   addEvents = () => {
-    this.checkboxes.forEach((box) => {
+    const checkboxes = Array.from(document.querySelectorAll('.todo-list__completed'));
+    checkboxes.forEach((box) => {
       box.addEventListener('change', () => {
-        todoList.completeTask(this.checkboxes.indexOf(box));
+        todoList.completeTask(checkboxes.indexOf(box));
       });
     });
   }
