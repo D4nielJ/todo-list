@@ -1,4 +1,3 @@
-import reorderList from "./reorderList";
 import Targets from "./targets";
 
 export default function grabberEvents() {

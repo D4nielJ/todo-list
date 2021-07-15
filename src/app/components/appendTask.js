@@ -17,7 +17,7 @@ export default function appendTask(index, todoList) {
     <div class="todo-list__grab grabber">
       <span class="grabber__circle"></span>
     </div>
-    <div data-index-target="${task.index}" class="todo-list__target"></div>
+    <div data-index-target="${task.index + 1}" class="todo-list__target"></div>
     `;
   li.classList.add('todo-list__item');
   li.setAttribute('draggable', 'true');

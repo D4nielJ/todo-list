@@ -122,6 +122,24 @@ body {
     }
   }
 
+  &__start {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  &__start-target {
+    position: absolute;
+    display: block;
+    background: $primary-color;
+    width: 100%;
+    min-height: 40px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
   &__target {
     content: '';
     position: absolute;
