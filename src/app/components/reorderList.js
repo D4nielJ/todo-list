@@ -1,72 +1,72 @@
 import todoList from '../utils/todoList.js';
 import deployList from './deployList.js';
+import completion from './completion.js';
 
-export default function reoderList() {
-  // USE REMOVEAT AND ADDAT
+class ReorderList {
+  targetsArray = [];
 
-  let targetsArray = [];
-  let droppedOn;
-  let startIndex;
-  let taskDragged;
+  droppedOn;
 
-  const selectTargets = () => {
+  startIndex;
+
+  taskDragged;
+
+  selectTargets = () => {
     const startTarget = document.querySelector('.todo-list__start-target');
     const targets = Array.from(document.querySelectorAll('.todo-list__target'));
-    targetsArray = [startTarget].concat(targets);
+    this.targetsArray = [startTarget].concat(targets);
   };
 
-  // Functions
-  const dragStart = (li) => {
-    taskDragged = todoList.removeTask(parseInt(li.getAttribute('data-index'), 10));
-    droppedOn = parseInt(li.getAttribute('data-index'), 10);
-    startIndex = droppedOn;
+  dragStart = (li) => {
+    this.taskDragged = todoList.removeTask(parseInt(li.getAttribute('data-index'), 10));
+    this.droppedOn = parseInt(li.getAttribute('data-index'), 10);
+    this.startIndex = this.droppedOn;
     li.classList.add('todo-list__item--hold');
     setTimeout(() => (li.classList.add('todo-list__item--invisible')), 1);
-    selectTargets();
-    targetsArray.forEach((target) => {
+    this.selectTargets();
+    this.targetsArray.forEach((target) => {
       target.classList.add('z-10');
     });
-    addEventsToTargets();
+    // addEventsToTargets();
     li.classList.add('todo-list__item--hold');
   };
 
-  const dragEnd = (li) => {
-    if (startIndex < droppedOn) {
-      droppedOn -= 1;
+  dragEnd = (li) => {
+    if (this.startIndex < this.droppedOn) {
+      this.droppedOn -= 1;
     }
-    todoList.addTaskAt(taskDragged, droppedOn);
+    todoList.addTaskAt(this.taskDragged, this.droppedOn);
     li.classList.remove('todo-list__item--hold');
     li.classList.remove('todo-list__item--invisible');
     deployList(todoList);
-    addEvents();
-    addEventsToTargets();
+    completion.addEvents();
+    this.addEvents();
+    this.addEventsToTargets();
   };
 
-  const dragOver = (e) => {
-    droppedOn = parseInt(e.currentTarget.getAttribute('data-index-target'), 10);
+  dragOver = (e) => {
+    this.droppedOn = parseInt(e.currentTarget.getAttribute('data-index-target'), 10);
   };
 
-  // Events
-
-  const addEvents = () => {
+  addEvents = () => {
     const listItems = Array.from(document.querySelectorAll('.todo-list__item'));
     listItems.forEach((li) => {
       li.addEventListener('dragstart', () => {
-        dragStart(li);
+        this.dragStart(li);
       });
       li.addEventListener('dragend', () => {
-        dragEnd(li);
+        this.dragEnd(li);
       });
     });
   };
 
-  const addEventsToTargets = () => {
-    selectTargets();
-    targetsArray.forEach((target) => {
-      target.addEventListener('dragenter', dragOver);
+  addEventsToTargets = () => {
+    this.selectTargets();
+    this.targetsArray.forEach((target) => {
+      target.addEventListener('dragenter', this.dragOver);
     });
   };
-  
-  addEventsToTargets();
-  addEvents();
 }
+
+const reorderList = new ReorderList();
+export { reorderList as default };

@@ -1,5 +1,5 @@
 import appendTask from './appendTask.js';
-import completion from './completion.js';
+// import completion from './completion.js';
 
 export default function deployList(todoList) {
   const ul = document.querySelector('.todo-list');
@@ -12,5 +12,5 @@ export default function deployList(todoList) {
     const li = appendTask(i, todoList);
     ul.appendChild(li);
   }
-  completion();
+  // completion.addEvents();
 }

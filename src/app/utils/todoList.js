@@ -1,6 +1,5 @@
 import Task from './task.js';
 import storage from '../components/localStorage/localStorage.js';
-import deployList from '../components/deployList.js';
 
 class TodoList {
   constructor() {
@@ -21,8 +20,7 @@ class TodoList {
 
   removeTask = (index) => {
     if (index < 0 || index > this.arr.length) {
-      console.log('invalid index');
-      return;
+      return 'invalid index';
     }
     const [removedTask] = this.arr.filter((task) => task.index === index);
     this.arr = this.arr.filter((task) => task.index !== index);
@@ -37,8 +35,7 @@ class TodoList {
 
   addTaskAt = (task, index = 0) => {
     if (index < 0 || index > this.arr.length + 1) {
-      console.log('invalid index');
-      return;
+      return 'invalid index';
     }
     const newTask = task;
     newTask.index = index;
@@ -49,12 +46,12 @@ class TodoList {
       newIndex += 1;
     });
     storage.saveData(this.arr);
+    return newTask;
   };
 
   completeTask = (index) => {
     const task = this.getTask(index);
     task.complete();
-    console.log(task);
     storage.saveData(this.arr);
   };
 
@@ -69,9 +66,7 @@ class TodoList {
       arrayLoaded.forEach((task) => {
         this.addTask(task.desc, task.completed);
       });
-      console.log(this.arr);
     }
-    deployList(this);
   };
 }
 
