@@ -1,10 +1,11 @@
-import appendTask from './components/appendTask.js';
-import grabberEvents from './components/grabberEvents.js';
+import deployList from './components/reorderList.js';
+import todoList from './utils/todoList.js';
 
-export default function run(ul, todoList) {
-  for (let i = 0; i < todoList.arr.length; i += 1) {
-    const li = appendTask(i, todoList);
-    ul.appendChild(li);
-  }
-  grabberEvents();
+export default function run() {
+  todoList.addTask('Create an index.js');
+  todoList.addTask('Create classes');
+  todoList.addTask('Implement functionality');
+  todoList.addTask('Check for errors with linters');
+  deployList(todoList);
+  // grabberEvents();
 }
