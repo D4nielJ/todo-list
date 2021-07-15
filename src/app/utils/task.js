@@ -4,4 +4,12 @@ export default class Task {
     this.desc = desc;
     this.completed = completed;
   }
+
+  complete = () => {
+    if (task.completed === false) {
+      task.completed = true;
+    } else {
+      task.completed = false;
+    } 
+  }
 }

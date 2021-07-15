@@ -11,7 +11,6 @@ class TodoList {
   };
 
   getTask = (index) => {
-    // const [task] = this.arr.filter((task) => task.index === index);
     const task = this.arr[index];
     return task;
   }
@@ -45,18 +44,13 @@ class TodoList {
       newIndex += 1;
     })
   }
+
+  completeTask = (index) => {
+    const task = this.getTask(index);
+    task.complete();
+  }
 }
 
 const todoList = new TodoList();
 export { todoList as default };
 
- // if (index === 0) {
-    //   this.arr = [task].concat(this.arr);
-    // } else if (index === this.arr.length) {
-    //   this.arr = this.arr.concat([task]);
-    // } else {
-    //   let newArr = [];
-    //   for (let i = 0; i < index; i += 1) {
-    //     newArr = newArr.concat(this.arr[i])
-    //   }
-    // }
