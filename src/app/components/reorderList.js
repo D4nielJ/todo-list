@@ -22,7 +22,7 @@ class ReorderList {
     this.droppedOn = parseInt(li.getAttribute('data-index'), 10);
     this.startIndex = this.droppedOn;
     li.classList.add('todo-list__item--hold');
-    setTimeout(() => (li.classList.add('todo-list__item--invisible')), 1);
+    // setTimeout(() => (li.classList.add('todo-list__item--invisible')), 1);
     this.selectTargets();
     this.targetsArray.forEach((target) => {
       target.classList.add('z-10');
@@ -37,7 +37,7 @@ class ReorderList {
     }
     todoList.addTaskAt(this.taskDragged, this.droppedOn);
     li.classList.remove('todo-list__item--hold');
-    li.classList.remove('todo-list__item--invisible');
+    // li.classList.remove('todo-list__item--invisible');
     deployList(todoList);
     completion.addEvents();
     this.addEvents();
