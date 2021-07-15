@@ -16,7 +16,6 @@ export default function reoderList() {
   // Functions
   const dragStart = (li) => {
     taskDragged = todoList.removeTask(parseInt(li.getAttribute('data-index'), 10));
-    console.log(taskDragged);
     droppedOn = parseInt(li.getAttribute('data-index'), 10);
     startIndex = droppedOn;
     li.classList.add('todo-list__item--hold');
@@ -35,7 +34,6 @@ export default function reoderList() {
     }
     // todoList.addTaskAt(li.getAttribute('data-desc'), droppedOn);
     todoList.addTaskAt(taskDragged, droppedOn);
-    console.log(todoList.arr);
     li.classList.remove('todo-list__item--hold');
     li.classList.remove('todo-list__item--invisible');
     deployList(todoList);

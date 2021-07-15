@@ -35,7 +35,6 @@ class TodoList {
       console.log('invalid index');
       return;
     }
-    console.log(index);
     const newTask = task;
     newTask.index = index;
     this.arr.splice(index, 0, newTask);

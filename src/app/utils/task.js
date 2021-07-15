@@ -6,10 +6,10 @@ export default class Task {
   }
 
   complete = () => {
-    if (task.completed === false) {
-      task.completed = true;
+    if (this.completed === false) {
+      this.completed = true;
     } else {
-      task.completed = false;
+      this.completed = false;
     } 
   }
 }
