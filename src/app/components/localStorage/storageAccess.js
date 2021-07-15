@@ -1,4 +1,4 @@
-const storageAcces = (type) => {
+const storageAccess = (type) => {
   let storage;
   try {
     storage = window[type];
@@ -25,4 +25,4 @@ const storageAcces = (type) => {
   }
 };
 
-export {storageAcces as default};
+export {storageAccess as default};
