@@ -4,7 +4,7 @@ import todoList from './utils/todoList.js';
 
 export default function run() {
   todoList.addTask('0');
-  todoList.addTask('1');
+  todoList.addTask('1', true);
   todoList.addTask('2');
   todoList.addTask('3');
   deployList(todoList);

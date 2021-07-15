@@ -1,11 +1,17 @@
 export default function appendTask(index, todoList) {
   const li = document.createElement('li');
   const task = todoList.getTask(index);
+  let checked = '';
+  if (task.completed === true) {
+    checked = 'checked';
+  }
+
   li.innerHTML = `
     <div>
       <input
         type="checkbox"
         class="todo-list__completed"
+        ${checked}
       />
       <input
         type="text"
