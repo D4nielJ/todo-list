@@ -12,8 +12,8 @@ class LocalStorage {
         const loadedData = JSON.parse(localStorage.getItem('userData'));
         return loadedData;
       }
-      return null;
     }
+    return null;
   };
 }
 

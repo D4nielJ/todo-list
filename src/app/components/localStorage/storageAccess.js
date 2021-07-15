@@ -25,4 +25,4 @@ const storageAccess = (type) => {
   }
 };
 
-export {storageAccess as default};
+export { storageAccess as default };

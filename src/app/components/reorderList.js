@@ -1,11 +1,13 @@
-import todoList from '../utils/todoList';
-import deployList from './deployList';
+import todoList from '../utils/todoList.js';
+import deployList from './deployList.js';
 
 export default function reoderList() {
   // USE REMOVEAT AND ADDAT
 
   let targetsArray = [];
-  let droppedOn, startIndex, taskDragged;
+  let droppedOn;
+  let startIndex;
+  let taskDragged;
 
   const selectTargets = () => {
     const startTarget = document.querySelector('.todo-list__start-target');
@@ -19,7 +21,7 @@ export default function reoderList() {
     droppedOn = parseInt(li.getAttribute('data-index'), 10);
     startIndex = droppedOn;
     li.classList.add('todo-list__item--hold');
-    setTimeout(() => (li.classList.add('todo-list__item--invisible'), 1));
+    setTimeout(() => (li.classList.add('todo-list__item--invisible')), 1);
     selectTargets();
     targetsArray.forEach((target) => {
       target.classList.add('z-10');
@@ -32,7 +34,6 @@ export default function reoderList() {
     if (startIndex < droppedOn) {
       droppedOn -= 1;
     }
-    // todoList.addTaskAt(li.getAttribute('data-desc'), droppedOn);
     todoList.addTaskAt(taskDragged, droppedOn);
     li.classList.remove('todo-list__item--hold');
     li.classList.remove('todo-list__item--invisible');
@@ -49,7 +50,6 @@ export default function reoderList() {
 
   const addEvents = () => {
     const listItems = Array.from(document.querySelectorAll('.todo-list__item'));
-
     listItems.forEach((li) => {
       li.addEventListener('dragstart', () => {
         dragStart(li);
@@ -66,5 +66,7 @@ export default function reoderList() {
       target.addEventListener('dragenter', dragOver);
     });
   };
+  
+  addEventsToTargets();
   addEvents();
 }

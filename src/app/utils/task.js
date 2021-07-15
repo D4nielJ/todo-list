@@ -10,6 +10,6 @@ export default class Task {
       this.completed = true;
     } else {
       this.completed = false;
-    } 
+    }
   }
 }

@@ -1,6 +1,7 @@
 import Task from './task.js';
 import storage from '../components/localStorage/localStorage.js';
 import deployList from '../components/deployList.js';
+
 class TodoList {
   constructor() {
     this.arr = [];
@@ -67,7 +68,7 @@ class TodoList {
       const arrayLoaded = storage.loadData();
       arrayLoaded.forEach((task) => {
         this.addTask(task.desc, task.completed);
-      })
+      });
       console.log(this.arr);
     }
     deployList(this);
