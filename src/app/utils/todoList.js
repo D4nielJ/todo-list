@@ -31,11 +31,12 @@ class TodoList {
     return removedTask;
   }
 
-  addTaskAt = (desc, index) => {
-    if (index < 0 || index > this.arr.length) {
+  addTaskAt = (desc, index = 0) => {
+    if (index < 0 || index > this.arr.length + 1) {
       console.log('invalid index');
       return;
     }
+    console.log(index);
     const newTask = new Task(index, desc);
     this.arr.splice(index, 0, newTask);
     let newIndex = 0

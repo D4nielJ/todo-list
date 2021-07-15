@@ -22,5 +22,6 @@ export default function appendTask(index, todoList) {
   li.classList.add('todo-list__item');
   li.setAttribute('draggable', 'true');
   li.setAttribute('data-index', `${task.index}`);
+  li.setAttribute('data-desc', `${task.desc}`);
   return li;
 }
