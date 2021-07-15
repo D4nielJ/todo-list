@@ -11,9 +11,11 @@ Application development for academic purposes.
 ## Screenshot
 
 ![](https://i.imgur.com/hJ7LrFb.jpg)
+
 ## Live Demo
 
-* [Live Demo](https://deploy-preview-2--jolly-wing-fd7a03.netlify.app/)
+[Live Demo 🙂](https://deploy-preview-2--jolly-wing-fd7a03.netlify.app/)
+
 
 ## Authors
 
