@@ -124,7 +124,7 @@ body {
 
   &__start {
     visibility: visible;
-    opacity: 0;
+    opacity: 1;
     height: 0;
     width: 100%;
     position: relative;
@@ -133,11 +133,11 @@ body {
   &__start-target {
     position: absolute;
     display: block;
-    background: $primary-color;
+    background: transparent;
     width: 100%;
-    min-height: 40px;
+    min-height: 42px;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: -1;
   }
 
   &__target {
@@ -148,7 +148,7 @@ body {
     width: 100%;
     height: 100%;
     transform: translateY(50%);
-    z-index: 10;
+    z-index: -1;
   }
 
   &__completed {
@@ -212,4 +212,8 @@ body {
       top: 0.7rem;
     }
   }
+}
+
+.z-10 {
+  z-index: 10;
 }
