@@ -18,7 +18,6 @@ class ReorderList {
   };
 
   dragStart = (li) => {
-    this.taskDragged = todoList.removeTask(parseInt(li.getAttribute('data-index'), 10));
     this.droppedOn = parseInt(li.getAttribute('data-index'), 10);
     this.startIndex = this.droppedOn;
     li.classList.add('todo-list__item--hold');
@@ -32,6 +31,7 @@ class ReorderList {
   };
 
   dragEnd = (li) => {
+    this.taskDragged = todoList.removeTask(parseInt(li.getAttribute('data-index'), 10));
     if (this.startIndex < this.droppedOn) {
       this.droppedOn -= 1;
     }
