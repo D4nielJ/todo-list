@@ -1,10 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
+$primary-color: #2e8ae6;
+$gray: rgb(245, 245, 245);
+$white: #fff;
+
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -17,6 +21,7 @@ li {
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -40,7 +45,7 @@ body {
 }
 
 .logo {
-  background: #2e8ae6;
+  background: $primary-color;
   border-radius: 3px;
   padding: 2rem;
   color: #fff;
@@ -54,9 +59,11 @@ body {
   font-size: 1.5rem;
   padding: 0;
   border: none;
+  background: $gray;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
 
   &__title {
+    background: $white;
     padding: 10px 10px 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -76,8 +83,12 @@ body {
     width: 100%;
     border: none;
     padding: 10px 20px;
-    font-style: italic;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    outline: none;
+
+    &::placeholder {
+      font-style: italic;
+    }
   }
 
   button {
@@ -93,11 +104,66 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5px 10px 20px;
+    padding: 10px 5px 10px 0;
+    background: $white;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    position: relative;
 
-    & input {
-      margin-right: 5px;
+    &--hold {
+      background: $white;
+      opacity: 1;
+      border: $primary-color 2px solid;
+      border-radius: 5px;
+    }
+
+    &--invisible {
+      opacity: 0;
+      visibility: visible;
+    }
+  }
+
+  &__start {
+    visibility: visible;
+    opacity: 1;
+    height: 0;
+    width: 100%;
+    position: relative;
+  }
+
+  &__start-target {
+    position: absolute;
+    display: block;
+    background: transparent;
+    width: 100%;
+    min-height: 42px;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  &__target {
+    content: '';
+    position: absolute;
+    display: block;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    transform: translateY(50%);
+    z-index: -1;
+  }
+
+  &__completed {
+    margin-right: 5px;
+    margin-left: 20px;
+  }
+
+  &__desc {
+    border: none;
+    outline: none;
+    min-height: 10px;
+    font-weight: 300;
+
+    &::placeholder {
+      opacity: 1;
     }
   }
 
@@ -145,4 +211,8 @@ body {
       top: 0.7rem;
     }
   }
+}
+
+.z-10 {
+  z-index: 10;
 }

@@ -1,8 +1,12 @@
-import appendTask from './components/appendTask.js';
+import reorderList from './components/reorderList.js';
+import todoList from './utils/todoList.js';
+import deployList from './components/deployList.js';
+import completion from './components/completion.js';
 
-export default function (ul, todoList) {
-  for (let i = 0; i < todoList.arr.length; i += 1) {
-    const li = appendTask(i, todoList);
-    ul.appendChild(li);
-  }
+export default function run() {
+  todoList.init();
+  deployList(todoList);
+  completion.addEvents();
+  reorderList.addEvents();
+  reorderList.addEventsToTargets();
 }
