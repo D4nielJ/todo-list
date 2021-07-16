@@ -10968,15 +10968,17 @@ body {
   border-bottom-right-radius: 5px;
 }
 .todo-list__delete {
+  z-index: -10;
   right: 15px;
   position: absolute;
   background: #fff;
   border: none;
   color: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transition: opacity 150ms ease-in-out, color 150ms ease-in-out;
+  transition: z-index 0s, opacity 150ms ease-in-out, color 150ms ease-in-out;
 }
 .todo-list__delete--active {
+  z-index: 1;
   opacity: 1;
 }
 .todo-list__delete:hover {

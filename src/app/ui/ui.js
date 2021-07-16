@@ -14,7 +14,7 @@ export default function ui() {
     const tasks = Array.from(document.querySelectorAll('.todo-list__item'));
     const inputs = Array.from(document.querySelectorAll('.todo-list__desc'));
     const deleteButtons = Array.from(
-      document.querySelectorAll('.todo-list__delete')
+      document.querySelectorAll('.todo-list__delete'),
     );
     const grabbers = Array.from(document.querySelectorAll('.todo-list__grab'));
 
@@ -30,7 +30,7 @@ export default function ui() {
           deleteButtons[index].classList.remove('todo-list__delete--active');
           grabbers[index].classList.remove('d-none');
           tasks[index].classList.remove('todo-list__item--active');
-        }, 100)        
+        }, 100);
       });
     });
   };
@@ -40,14 +40,14 @@ export default function ui() {
     const checkboxes = Array.from(document.querySelectorAll('.todo-list__completed'));
     checkboxes.forEach((box, index) => {
       box.addEventListener('change', () => {
-        if(box.checked) {
+        if (box.checked) {
           inputs[index].classList.add('todo-list__desc--done');
         } else {
           inputs[index].classList.remove('todo-list__desc--done');
         }
       });
     });
-  }
+  };
 
   submitUi();
   taskUi();

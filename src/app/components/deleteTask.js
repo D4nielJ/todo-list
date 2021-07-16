@@ -9,10 +9,10 @@ class DeleteTask {
       button.addEventListener('click', () => {
         const index = parseInt(button.parentElement.getAttribute('data-index'), 10);
         this.deleteTask(index);
-      })
-    })
+      });
+    });
   }
-  
+
   deleteTask = (index) => {
     todoList.removeTask(index);
     deployList(todoList);

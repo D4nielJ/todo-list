@@ -97,6 +97,7 @@
   }
 
   &__delete {
+    z-index: -10;
     right: 15px;
     position: absolute;
     background: $white;
@@ -104,10 +105,12 @@
     color: $gray-buttons;
     opacity: 0;
     transition:
+      z-index 0s,
       opacity $speed ease-in-out,
       color $speed ease-in-out;
 
     &--active {
+      z-index: 1;
       opacity: 1;
     }
 
