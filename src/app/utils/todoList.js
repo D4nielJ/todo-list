@@ -91,8 +91,9 @@ class TodoList {
   init = () => {
     if (!storage.loadData()) {
       this.addTask('Open minimalist', true);
-      this.addTask('Sort the list by dragging');
+      this.addTask('Add a new task');
       this.addTask('Check your tasks done');
+      this.addTask('You can delete me');
       this.addTask('Approve this PR');
     } else {
       const arrayLoaded = storage.loadData();

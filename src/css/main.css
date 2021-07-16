@@ -10891,7 +10891,7 @@ body {
   justify-content: space-between;
   padding-right: 10px;
   background: #fff;
-  border: transparent 2px solid;
+  border: transparent 1px solid;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   position: relative;
 }
@@ -10904,6 +10904,9 @@ body {
 .todo-list__item--invisible {
   opacity: 0;
   visibility: visible;
+}
+.todo-list__item--active {
+  background-color: #e9f4ff;
 }
 .todo-list__start {
   visibility: visible;
@@ -10946,6 +10949,7 @@ body {
   font-weight: 300;
   min-width: 250px;
   padding: 10px 0;
+  background: transparent;
 }
 .todo-list__desc--done {
   text-decoration: line-through;
@@ -10972,7 +10976,7 @@ body {
   z-index: -10;
   right: 15px;
   position: absolute;
-  background: #fff;
+  background: transparent;
   border: none;
   color: rgba(0, 0, 0, 0.4);
   opacity: 0;
@@ -10984,6 +10988,19 @@ body {
 }
 .todo-list__delete:hover {
   color: #2e8ae6;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 0;
 }
 
 .z-10 {

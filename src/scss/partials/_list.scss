@@ -7,7 +7,7 @@
     justify-content: space-between;
     padding-right: 10px;
     background: $white;
-    border: transparent 2px solid;
+    border: transparent 1px solid;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
     position: relative;
 
@@ -21,6 +21,10 @@
     &--invisible {
       opacity: 0;
       visibility: visible;
+    }
+
+    &--active {
+      background-color: $primary-color-clear;
     }
   }
 
@@ -70,6 +74,7 @@
     font-weight: 300;
     min-width: 250px;
     padding: 10px 0;
+    background: transparent;
 
     &--done {
       text-decoration: line-through;
@@ -101,7 +106,7 @@
     z-index: -10;
     right: 15px;
     position: absolute;
-    background: $white;
+    background: transparent;
     border: none;
     color: $gray-buttons;
     opacity: 0;
