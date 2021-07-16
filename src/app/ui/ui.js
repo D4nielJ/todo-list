@@ -30,7 +30,7 @@ export default function ui() {
           deleteButtons[index].classList.remove('todo-list__delete--active');
           grabbers[index].classList.remove('d-none');
           tasks[index].classList.remove('todo-list__item--active');
-        }, 100);
+        }, 300);
       });
     });
   };
