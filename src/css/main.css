@@ -10860,7 +10860,7 @@ body {
 }
 .card__title {
   background: #2e8ae6;
-  padding: 12px 10px 12px 20px;
+  padding: 16px 10px 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,6 +1,8 @@
+/* eslint-disable */
 import resetEvents from '../utils/resetEvents.js';
 import todoList from '../utils/todoList.js';
 import deployList from './deployList.js';
+/* eslint-enable */
 
 class DeleteCompleted {
   addListener = () => {

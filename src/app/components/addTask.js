@@ -1,6 +1,8 @@
+/* eslint-disable */
 import todoList from '../utils/todoList.js';
 import deployList from './deployList.js';
 import resetEvents from '../utils/resetEvents.js';
+/* eslint-enable */
 
 class AddTask {
   form;

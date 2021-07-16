@@ -1,9 +1,11 @@
+/* eslint-disable */
 import todoList from '../utils/todoList.js';
 import deployList from './deployList.js';
 import completion from './completion.js';
 import editTask from './editTask.js';
 import deleteTask from './deleteTask.js';
 import ui from '../ui/ui.js';
+/* eslint-enable */
 
 class ReorderList {
   targetsArray = [];
