@@ -5,7 +5,8 @@
   "private": "true",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open --liveReload",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "wsass": "sass --watch src/scss:src/css"
   },
   "repository": {
     "type": "git",
