@@ -1,218 +1,25 @@
-@import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@charset 'utf-8';
 
-$primary-color: #2e8ae6;
-$gray: rgb(245, 245, 245);
-$white: #fff;
+// vendors
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
+@use '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+// abstracts and base
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
+@use 'partials/variables' as *;
+@use 'partials/base';
 
-body {
-  font-size: 1.6rem;
-  font-family: 'Open Sans', sans-serif;
-  color: rgb(0, 0, 0);
-  background-color: rgb(245, 245, 245);
-}
+// Components
 
-.main-title {
-  padding-top: 10rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@use 'partials/grabber';
 
-  h1 {
-    font-size: 3rem;
-  }
-}
+// Sections
 
-.logo {
-  background: $primary-color;
-  border-radius: 3px;
-  padding: 2rem;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
+@use 'partials/header';
+@use 'partials/card';
+@use 'partials/list';
+@use 'partials/footer';
 
-.card {
-  font-size: 1.5rem;
-  padding: 0;
-  border: none;
-  background: $gray;
-  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
+// Utils
 
-  &__title {
-    background: $white;
-    padding: 10px 10px 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-    color: rgba(0, 0, 0, 0.7);
-
-    & .fas {
-      font-size: 1.3rem;
-      color: rgba(0, 0, 0, 0.4);
-      transform: rotate(-30deg);
-      cursor: pointer;
-    }
-  }
-
-  &__add-task {
-    width: 100%;
-    border: none;
-    padding: 10px 20px;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-    outline: none;
-
-    &::placeholder {
-      font-style: italic;
-    }
-  }
-
-  button {
-    color: rgba(0, 0, 0, 0.4);
-    border: none;
-    width: 100%;
-    padding: 15px 20px;
-  }
-}
-
-.todo-list {
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 5px 10px 0;
-    background: $white;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-    position: relative;
-
-    &--hold {
-      background: $white;
-      opacity: 1;
-      border: $primary-color 2px solid;
-      border-radius: 5px;
-    }
-
-    &--invisible {
-      opacity: 0;
-      visibility: visible;
-    }
-  }
-
-  &__start {
-    visibility: visible;
-    opacity: 1;
-    height: 0;
-    width: 100%;
-    position: relative;
-  }
-
-  &__start-target {
-    position: absolute;
-    display: block;
-    background: transparent;
-    width: 100%;
-    min-height: 42px;
-    transform: translateY(-50%);
-    z-index: -1;
-  }
-
-  &__target {
-    content: '';
-    position: absolute;
-    display: block;
-    background: transparent;
-    width: 100%;
-    height: 100%;
-    transform: translateY(50%);
-    z-index: -1;
-  }
-
-  &__completed {
-    margin-right: 5px;
-    margin-left: 20px;
-  }
-
-  &__desc {
-    border: none;
-    outline: none;
-    min-height: 10px;
-    font-weight: 300;
-
-    &::placeholder {
-      opacity: 1;
-    }
-  }
-
-  &__grab {
-    width: 2rem;
-    height: 2rem;
-    justify-self: flex-end;
-  }
-}
-
-.grabber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: move;
-  min-width: 25px;
-  min-height: 25px;
-  // background-color: brown;
-
-  &__circle {
-    display: block;
-    width: 0.4rem;
-    height: 0.4rem;
-    border-radius: 0.2rem;
-    background: rgba(0, 0, 0, 0.3);
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0.4rem;
-      height: 0.4rem;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 0.2rem;
-      top: -0.7rem;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 0.4rem;
-      height: 0.4rem;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 0.2rem;
-      top: 0.7rem;
-    }
-  }
-}
-
-.z-10 {
-  z-index: 10;
-}
+@use 'partials/utils'

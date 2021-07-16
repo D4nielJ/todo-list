@@ -1,4 +1,4 @@
 import run from './app/run.js';
-import './scss/main.scss';
+import './css/main.css';
 
 window.onload = run;

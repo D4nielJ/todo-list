@@ -1,12 +1,11 @@
-import reorderList from './components/reorderList.js';
 import todoList from './utils/todoList.js';
 import deployList from './components/deployList.js';
-import completion from './components/completion.js';
+import resetEvents from './utils/resetEvents.js';
+import ui from './ui/ui.js';
 
 export default function run() {
   todoList.init();
   deployList(todoList);
-  completion.addEvents();
-  reorderList.addEvents();
-  reorderList.addEventsToTargets();
+  resetEvents();
+  ui();
 }

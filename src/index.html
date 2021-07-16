@@ -19,24 +19,28 @@
           </div>
           <h1 class="mb-5">minimalist</h1>
         </div>
-        <div class="card col-11 col-md-6 col-lg-4">
-          <div class="card__title">
-            <span>Demo</span>
-            <i class="fas fa-sync-alt"></i>
-          </div>
-          <form action="#">
+        <div class="card col-11 col-md-6 col-lg-5">
+          <div class="card__title"></div>
+          <form action="#" class="card__form">
             <input
+              name="newtask"
+              id="newtask"
               class="card__add-task"
               type="text"
               placeholder="Add to your list"
+              required
             />
+            <button class="card__submit" type="submit"><i class="fas fa-plus"></i></button>
           </form>
           <ul class="todo-list">
             <!-- to be filled dinamycally with JS -->
           </ul>
-          <button type="button">Clear all completed</button>
+          <button type="button" class="todo-list__clear">Clear all completed</button>
         </div>
       </div>
     </div>
+    <footer>
+      <p>Developed by <a href="https://github.com/D4nielJ/" target="_blank" rel="noopener noreferrer">D4nielJ</a></p>
+    </footer>
   </body>
 </html>

@@ -12,4 +12,8 @@ export default class Task {
       this.completed = false;
     }
   }
+
+  edit = (desc) => {
+    this.desc = desc;
+  }
 }
