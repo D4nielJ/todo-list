@@ -10989,6 +10989,16 @@ body {
 .todo-list__delete:hover {
   color: #2e8ae6;
 }
+.todo-list__empty {
+  background: whitesmoke;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 2;
+}
 
 footer {
   position: absolute;

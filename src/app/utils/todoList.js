@@ -89,13 +89,7 @@ class TodoList {
   };
 
   init = () => {
-    if (!storage.loadData()) {
-      this.addTask('Open minimalist', true);
-      this.addTask('Add a new task');
-      this.addTask('Check your tasks done');
-      this.addTask('You can delete me');
-      this.addTask('Approve this PR');
-    } else {
+    if (storage.loadData()) {
       const arrayLoaded = storage.loadData();
       arrayLoaded.forEach((task) => {
         this.addTask(task.desc, task.completed);

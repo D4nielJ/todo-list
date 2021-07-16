@@ -124,4 +124,15 @@
       color: $primary-color;
     }
   }
+
+  &__empty {
+    background: $gray;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray-buttons;
+    text-align: center;
+    line-height: 2;
+  }
 }
