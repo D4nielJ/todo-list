@@ -23,7 +23,8 @@
     border: none;
     color: $primary-color;
     opacity: 0;
-    transition: opacity $speed ease-in-out,
+    transition:
+      opacity $speed ease-in-out,
       color $speed ease-in-out;
 
     &--active {
@@ -41,7 +42,6 @@
     color: $white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-
 
     & .fas {
       font-size: 1.3rem;
