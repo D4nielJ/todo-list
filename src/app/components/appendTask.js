@@ -23,6 +23,8 @@ export default function appendTask(index, todoList) {
     <div class="todo-list__grab grabber">
       <span class="grabber__circle"></span>
     </div>
+    <button type="button" class="todo-list__delete fas fa-trash">
+    </button>
     <div data-index-target="${task.index + 1}" class="todo-list__target"></div>
     `;
   li.classList.add('todo-list__item');

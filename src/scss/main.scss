@@ -1,59 +1,7 @@
+@charset 'utf-8';
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
-$primary-color: #2e8ae6;
-$gray: rgb(245, 245, 245);
-$white: #fff;
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  font-family: 'Open Sans', sans-serif;
-  color: rgb(0, 0, 0);
-  background-color: rgb(245, 245, 245);
-}
-
-.main-title {
-  padding-top: 10rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    font-size: 3rem;
-  }
-}
-
-.logo {
-  background: $primary-color;
-  border-radius: 3px;
-  padding: 2rem;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
+@import './partials/';
 
 .card {
   font-size: 1.5rem;

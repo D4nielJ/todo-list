@@ -1,7 +1,6 @@
 import todoList from '../utils/todoList.js';
 import deployList from './deployList.js';
-import completion from './completion.js';
-import reorderList from './reorderList.js';
+import resetEvents from '../utils/resetEvents.js';
 
 class AddTask {
   form;
@@ -16,9 +15,7 @@ class AddTask {
     todoList.addTask(this.form.newtask.value);
     this.form.reset();
     deployList(todoList);
-    completion.addEvents();
-    reorderList.addEvents();
-    reorderList.addEventsToTargets();
+    resetEvents();
   };
 }
 
