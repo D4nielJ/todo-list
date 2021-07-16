@@ -10889,7 +10889,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px 10px 0;
+  padding-right: 10px;
   background: #fff;
   border: transparent 2px solid;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -10945,6 +10945,7 @@ body {
   min-height: 10px;
   font-weight: 300;
   min-width: 250px;
+  padding: 10px 0;
 }
 .todo-list__desc--done {
   text-decoration: line-through;
