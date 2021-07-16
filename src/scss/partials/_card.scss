@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+.card {
+  font-size: 1.5rem;
+  padding: 0;
+  border: none;
+  background: $gray;
+  box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
+
+  &__title {
+    background: $white;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    color: rgba(0, 0, 0, 0.7);
+
+    & .fas {
+      font-size: 1.3rem;
+      color: rgba(0, 0, 0, 0.4);
+      transform: rotate(-30deg);
+      cursor: pointer;
+    }
+  }
+
+  &__add-task {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    outline: none;
+
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+
+  button {
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    width: 100%;
+    padding: 15px 20px;
+  }
+}

@@ -1,0 +1,38 @@
+.grabber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: move;
+  min-width: 25px;
+  min-height: 25px;
+  // background-color: brown;
+
+  &__circle {
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.2rem;
+      top: -0.7rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.2rem;
+      top: 0.7rem;
+    }
+  }
+}
