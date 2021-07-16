@@ -7,6 +7,18 @@
   background: $gray;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
 
+  &__form {
+    display: flex;
+    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  }
+
+  &__submit {
+    background: $white;
+    border: none;
+    padding-right: 10px;
+    color: $primary-color;
+  }
+
   &__title {
     background: $white;
     padding: 10px 10px 10px 20px;
@@ -28,18 +40,10 @@
     width: 100%;
     border: none;
     padding: 10px 20px;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
     outline: none;
 
     &::placeholder {
       font-style: italic;
     }
-  }
-
-  button {
-    color: rgba(0, 0, 0, 0.4);
-    border: none;
-    width: 100%;
-    padding: 15px 20px;
   }
 }

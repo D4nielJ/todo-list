@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5px 10px 0;
+    padding: 10px 10px 10px 0;
     background: $white;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
     position: relative;
@@ -72,5 +72,22 @@
     width: 2rem;
     height: 2rem;
     justify-self: flex-end;
+  }
+
+  &__clear {
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  &__delete {
+    background: $white;
+    border: none;
+    color: $gray-buttons;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 }

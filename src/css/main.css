@@ -10838,6 +10838,16 @@ body {
   background: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
 }
+.card__form {
+  display: flex;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+}
+.card__submit {
+  background: #fff;
+  border: none;
+  padding-right: 10px;
+  color: #2e8ae6;
+}
 .card__title {
   background: #fff;
   padding: 10px 10px 10px 20px;
@@ -10857,24 +10867,17 @@ body {
   width: 100%;
   border: none;
   padding: 10px 20px;
-  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   outline: none;
 }
 .card__add-task::placeholder {
   font-style: italic;
-}
-.card button {
-  color: rgba(0, 0, 0, 0.4);
-  border: none;
-  width: 100%;
-  padding: 15px 20px;
 }
 
 .todo-list__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 5px 10px 0;
+  padding: 10px 10px 10px 0;
   background: #fff;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   position: relative;
@@ -10933,9 +10936,27 @@ body {
   height: 2rem;
   justify-self: flex-end;
 }
+.todo-list__clear {
+  color: rgba(0, 0, 0, 0.4);
+  border: none;
+  width: 100%;
+  padding: 15px 20px;
+}
+.todo-list__delete {
+  background: #fff;
+  border: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+.todo-list__delete:hover {
+  color: #2e8ae6;
+}
 
 .z-10 {
   z-index: 10;
+}
+
+.d-none {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
