@@ -2,6 +2,7 @@ import reorderList from './components/reorderList.js';
 import todoList from './utils/todoList.js';
 import deployList from './components/deployList.js';
 import completion from './components/completion.js';
+import addTask from './components/addTask.js';
 
 export default function run() {
   todoList.init();
@@ -9,4 +10,5 @@ export default function run() {
   completion.addEvents();
   reorderList.addEvents();
   reorderList.addEventsToTargets();
+  addTask.addListener();
 }
