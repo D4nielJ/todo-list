@@ -14,7 +14,7 @@ Application development for academic purposes.
 
 ## Live Demo
 
-[Live Demo 🙂](https://deploy-preview-3--jolly-wing-fd7a03.netlify.app/)
+[Live Demo 🙂](https://jolly-wing-fd7a03.netlify.app/)
 
 
 ## Getting Started
