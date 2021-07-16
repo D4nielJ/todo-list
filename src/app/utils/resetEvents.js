@@ -4,6 +4,7 @@ import addTask from '../components/addTask.js';
 import editTask from '../components/editTask.js';
 import deleteTask from '../components/deleteTask.js';
 import deleteCompleted from '../components/deleteCompleted.js';
+import ui from '../ui/ui.js';
 
 export default function resetEvents() {
   completion.addEvents();
@@ -13,4 +14,5 @@ export default function resetEvents() {
   editTask.addListener();
   deleteTask.addListener();
   deleteCompleted.addListener();
+  ui();
 }

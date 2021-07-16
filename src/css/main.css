@@ -10837,25 +10837,37 @@ body {
   border: none;
   background: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
+  position: relative;
+  border-radius: 5px;
 }
 .card__form {
   display: flex;
+  align-items: center;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
 .card__submit {
+  font-size: 1.5rem;
+  right: 18px;
+  position: absolute;
   background: #fff;
   border: none;
-  padding-right: 10px;
   color: #2e8ae6;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out, color 150ms ease-in-out;
+}
+.card__submit--active {
+  opacity: 1;
 }
 .card__title {
-  background: #fff;
-  padding: 10px 10px 10px 20px;
+  background: #2e8ae6;
+  padding: 12px 10px 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-  color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .card__title .fas {
   font-size: 1.3rem;
@@ -10879,14 +10891,15 @@ body {
   justify-content: space-between;
   padding: 10px 10px 10px 0;
   background: #fff;
+  border: transparent 2px solid;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   position: relative;
 }
 .todo-list__item--hold {
   background: #fff;
   opacity: 1;
-  border: #2e8ae6 2px solid;
-  border-radius: 5px;
+  border: #2e8ae6 1px solid;
+  border-radius: 2px;
 }
 .todo-list__item--invisible {
   opacity: 0;
@@ -10922,11 +10935,21 @@ body {
   margin-right: 5px;
   margin-left: 20px;
 }
+.todo-list__desc-container {
+  width: 100%;
+}
 .todo-list__desc {
+  display: inline-block;
   border: none;
   outline: none;
   min-height: 10px;
   font-weight: 300;
+  min-width: 250px;
+}
+.todo-list__desc--done {
+  text-decoration: line-through;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4);
 }
 .todo-list__desc::placeholder {
   opacity: 1;
@@ -10941,11 +10964,20 @@ body {
   border: none;
   width: 100%;
   padding: 15px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .todo-list__delete {
+  right: 15px;
+  position: absolute;
   background: #fff;
   border: none;
   color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out, color 150ms ease-in-out;
+}
+.todo-list__delete--active {
+  opacity: 1;
 }
 .todo-list__delete:hover {
   color: #2e8ae6;

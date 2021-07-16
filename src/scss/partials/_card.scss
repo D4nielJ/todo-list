@@ -6,27 +6,42 @@
   border: none;
   background: $gray;
   box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 5px 0;
+  position: relative;
+  border-radius: 5px;
 
   &__form {
     display: flex;
+    align-items: center;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   }
 
   &__submit {
+    font-size: 1.5rem;
+    right: 18px;
+    position: absolute;
     background: $white;
     border: none;
-    padding-right: 10px;
     color: $primary-color;
+    opacity: 0;
+    transition: opacity $speed ease-in-out,
+      color $speed ease-in-out;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__title {
-    background: $white;
-    padding: 10px 10px 10px 20px;
+    background: $primary-color;
+    padding: 12px 10px 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-    color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px $white solid;
+    color: $white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
 
     & .fas {
       font-size: 1.3rem;

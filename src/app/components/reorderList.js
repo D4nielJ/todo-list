@@ -3,6 +3,7 @@ import deployList from './deployList.js';
 import completion from './completion.js';
 import editTask from './editTask.js';
 import deleteTask from './deleteTask.js';
+import ui from '../ui/ui.js';
 
 class ReorderList {
   targetsArray = [];
@@ -46,6 +47,7 @@ class ReorderList {
     deleteTask.addListener();
     this.addEvents();
     this.addEventsToTargets();
+    ui();
   };
 
   dragOver = (e) => {
