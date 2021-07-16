@@ -17,6 +17,13 @@ Application development for academic purposes.
 [Live Demo 🙂](https://deploy-preview-2--jolly-wing-fd7a03.netlify.app/)
 
 
+## Getting Started
+**Install**
+
+- `git clone https://github.com/D4nielJ/todo-list.git`
+- `npm install`
+- `npm run start`
+  
 ## Authors
 
 👤 **D4nielJ**
