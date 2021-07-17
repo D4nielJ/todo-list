@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    background: $white;
   }
 
   &__submit {
@@ -52,7 +53,7 @@
   }
 
   &__add-task {
-    width: 100%;
+    width: 90%;
     border: none;
     padding: 10px 20px;
     outline: none;

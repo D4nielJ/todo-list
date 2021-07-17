@@ -10847,6 +10847,7 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  background: #fff;
 }
 .card__submit {
   font-size: 1.5rem;
@@ -10879,7 +10880,7 @@ body {
   cursor: pointer;
 }
 .card__add-task {
-  width: 100%;
+  width: 90%;
   border: none;
   padding: 10px 20px;
   outline: none;
@@ -10892,7 +10893,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 5rem;
+  padding-right: 4rem;
   background: #fff;
   border: transparent 1px solid;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -10921,8 +10922,9 @@ body {
 .todo-list__start-target {
   position: absolute;
   display: block;
+  right: -50%;
+  left: -50%;
   background: transparent;
-  width: 100%;
   min-height: 42px;
   transform: translateY(-50%);
   z-index: -1;
@@ -10931,8 +10933,9 @@ body {
   content: "";
   position: absolute;
   display: block;
+  right: -50%;
+  left: -50%;
   background: transparent;
-  width: 100%;
   height: 100%;
   transform: translateY(50%);
   z-index: -1;
@@ -10946,13 +10949,11 @@ body {
   display: flex;
 }
 .todo-list__desc {
-  display: inline-block;
   border: none;
   outline: none;
   min-height: 10px;
   font-weight: 300;
-  min-width: 250px;
-  max-width: 35ch;
+  width: 100%;
   padding: 1rem 0 1rem 0.5rem;
   background: transparent;
   margin-bottom: 0;
