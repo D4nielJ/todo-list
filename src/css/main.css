@@ -10772,6 +10772,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: black;
   background-color: whitesmoke;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 10rem;
 }
 
 .grabber {
