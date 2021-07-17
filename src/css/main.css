@@ -10892,7 +10892,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: 5rem;
   background: #fff;
   border: transparent 1px solid;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -10943,6 +10943,7 @@ body {
 }
 .todo-list__desc-container {
   width: 100%;
+  display: flex;
 }
 .todo-list__desc {
   display: inline-block;
@@ -10951,7 +10952,8 @@ body {
   min-height: 10px;
   font-weight: 300;
   min-width: 250px;
-  padding: 10px 0;
+  max-width: 35ch;
+  padding: 1rem 0 1rem 0.5rem;
   background: transparent;
   margin-bottom: 0;
 }
@@ -10964,6 +10966,8 @@ body {
   opacity: 1;
 }
 .todo-list__grab {
+  position: absolute;
+  right: 0.9rem;
   width: 2rem;
   height: 2rem;
   justify-self: flex-end;

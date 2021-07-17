@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 5rem;
     background: $white;
     border: transparent 1px solid;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -64,6 +64,7 @@
 
   &__desc-container {
     width: 100%;
+    display: flex;
   }
 
   &__desc {
@@ -73,7 +74,8 @@
     min-height: 10px;
     font-weight: 300;
     min-width: 250px;
-    padding: 10px 0;
+    max-width: 35ch;
+    padding: 1rem 0 1rem 0.5rem;
     background: transparent;
     margin-bottom: 0;
 
@@ -89,6 +91,8 @@
   }
 
   &__grab {
+    position: absolute;
+    right: 0.9rem;
     width: 2rem;
     height: 2rem;
     justify-self: flex-end;
