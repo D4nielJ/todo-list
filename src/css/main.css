@@ -10953,6 +10953,7 @@ body {
   min-width: 250px;
   padding: 10px 0;
   background: transparent;
+  margin-bottom: 0;
 }
 .todo-list__desc--done {
   text-decoration: line-through;

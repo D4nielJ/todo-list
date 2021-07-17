@@ -23,14 +23,16 @@ export default function ui() {
         deleteButtons[index].classList.add('todo-list__delete--active');
         grabbers[index].classList.add('d-none');
         tasks[index].classList.add('todo-list__item--active');
+        tasks[index].setAttribute('draggable', 'false');
       });
 
       task.addEventListener('blur', () => {
         setTimeout(() => {
           deleteButtons[index].classList.remove('todo-list__delete--active');
           grabbers[index].classList.remove('d-none');
-          tasks[index].classList.remove('todo-list__item--active');
         }, 300);
+        tasks[index].classList.remove('todo-list__item--active');
+        tasks[index].setAttribute('draggable', 'true');
       });
     });
   };

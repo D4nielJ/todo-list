@@ -15,12 +15,10 @@ export default function appendTask(index, todoList) {
         class="todo-list__completed"
         ${checked}
       />
-      <input
-        type="text"
-        value="${task.desc}"
+      <p
+        contenteditable="true"
         class="todo-list__desc ${classDesc}"
-        maxlength="255"
-      />
+      >${task.desc}</p>
     </div>
     <div class="todo-list__grab grabber">
       <span class="grabber__circle"></span>
@@ -30,8 +28,8 @@ export default function appendTask(index, todoList) {
     <div data-index-target="${task.index + 1}" class="todo-list__target"></div>
     `;
   li.classList.add('todo-list__item');
-  li.setAttribute('draggable', 'true');
   li.setAttribute('data-index', `${task.index}`);
   li.setAttribute('data-desc', `${task.desc}`);
+  li.setAttribute('draggable', 'true');
   return li;
 }
