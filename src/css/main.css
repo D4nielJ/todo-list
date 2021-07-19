@@ -6829,8 +6829,8 @@ body {
 .todo-list__start-target {
   position: absolute;
   display: block;
-  right: -50%;
-  left: -50%;
+  right: 0;
+  left: 0;
   background: transparent;
   min-height: 42px;
   transform: translateY(-50%);
@@ -6840,8 +6840,8 @@ body {
   content: "";
   position: absolute;
   display: block;
-  right: -50%;
-  left: -50%;
+  right: 0;
+  left: 0;
   background: transparent;
   height: 100%;
   transform: translateY(50%);
@@ -6854,6 +6854,7 @@ body {
 .todo-list__desc-container {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .todo-list__desc {
   border: none;

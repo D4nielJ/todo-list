@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+// Bootstrap
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../../node_modules/bootstrap/scss/functions";
 
@@ -18,8 +20,6 @@
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
-
-// vendors
 
 // abstracts and base
 
