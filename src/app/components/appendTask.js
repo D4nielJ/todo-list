@@ -1,9 +1,9 @@
 export default function appendTask(index, todoList) {
   const li = document.createElement('li');
-  const task = todoList.getTask(index);
   const { desc, completed } = todoList.getTask(index);
   let checked = '';
   let classDesc = '';
+
   if (completed === true) {
     checked = 'checked';
     classDesc = 'todo-list__desc--done';
@@ -28,9 +28,11 @@ export default function appendTask(index, todoList) {
     </button>
     <div data-index-target="${index + 1}" class="todo-list__target"></div>
     `;
+
   li.classList.add('todo-list__item');
   li.setAttribute('data-index', `${index}`);
   li.setAttribute('data-desc', `${desc}`);
   li.setAttribute('draggable', 'true');
+
   return li;
 }
