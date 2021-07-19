@@ -10,7 +10,6 @@ class EditTask {
         const desc = task.textContent;
         const index = parseInt(task.parentElement.parentElement.getAttribute('data-index'), 10);
         this.editTask(index, desc);
-        // task.parentElement.parentElement.setAttribute('draggable', 'true');
       });
     });
   }

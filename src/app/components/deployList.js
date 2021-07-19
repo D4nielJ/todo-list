@@ -1,7 +1,7 @@
 import appendTask from './appendTask.js';
 
 export default function deployList(todoList) {
-  const [ listArr ] = [ todoList.arr ];
+  const [listArr] = [todoList.arr];
   const ul = document.querySelector('.todo-list');
   ul.innerHTML = '';
   const startTarget = document.createElement('li');

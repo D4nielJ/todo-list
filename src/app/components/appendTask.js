@@ -1,6 +1,6 @@
 export default function appendTask(index, todoList) {
-  const li = document.createElement('li');
   const { desc, completed } = todoList.getTask(index);
+  const li = document.createElement('li');
   let checked = '';
   let classDesc = '';
 
