@@ -15,16 +15,6 @@ class EditTask {
     });
   }
 
-  // deactivateDraggable = () => {
-  //   this.tasks = document.querySelectorAll('.todo-list__desc');
-  //   this.tasks.forEach((task) => {
-  //     task.addEventListener('focus', () => {
-  //       task.parentElement.parentElement.setAttribute('draggable', 'false');
-  //       console.log(task.parentElement.parentElement)
-  //     });
-  //   });
-  // }
-
   editTask = (index, desc) => {
     todoList.editTask(index, desc);
   }

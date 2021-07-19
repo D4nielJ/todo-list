@@ -13,9 +13,9 @@ export default function deployList(todoList) {
     div.innerHTML = 'Your list is empty | Add new tasks to start';
     ul.appendChild(div);
   } else {
-    for (let i = 0; i < todoList.arr.length; i += 1) {
-      const li = appendTask(i, todoList);
+    todoList.arr.forEach((task, index) => {
+      const li = appendTask(index, todoList);
       ul.appendChild(li);
-    }
+    });
   }
 }
