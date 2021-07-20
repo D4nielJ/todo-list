@@ -15,5 +15,5 @@ export default class Task {
 
   edit = (desc) => {
     this.desc = desc;
-  }
+  };
 }
