@@ -17,7 +17,7 @@ class AddTask {
     todoList.addTask(this.form.newtask.value);
     this.form.reset();
     deployList(todoList);
-    // resetEvents(); 
+    resetEvents();
   };
 }
 

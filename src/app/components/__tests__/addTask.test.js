@@ -2,12 +2,13 @@
  * @jest-environment jsdom
  */
 
-import { expect } from '@jest/globals';
-import { test } from 'jest-circus';
+
+import todoList from '../../utils/todoList.js';
 import addTask from '../addTask.js';
+jest.mock('../../utils/resetEvents.js');
 
 describe('Add items to the list', () => {
-  it('addTask should add an item to the DOM', () => {
+  test('addTask should add an item to the DOM', () => {
     // Arrange
     document.body.innerHTML = `<form action='#' class='card__form'>
     <input
@@ -23,36 +24,31 @@ describe('Add items to the list', () => {
     const form = document.querySelector('form');
     form.newtask = document.querySelector('input');
     form.newtask.value = 'hello-world';
-    const listTest = document.querySelectorAll('.todo-list li');
     const event = document.createEvent('HTMLEvents');
     event.initEvent('submit', true, true);
     event.eventName = 'submit';
-
+    
     // Act
     addTask.addListener();
     form.dispatchEvent(event);
-
+    form.dispatchEvent(event);
+    
     // Assert
-    expect(listTest).toHaveLength(2);
+    const listTest = document.querySelectorAll('li');
+    expect(listTest).toHaveLength(3);
   });
 
-  test('addTask should add an item to the array', () => {});
+  test('addTask should add an item to the array', () => {
+    expect(todoList.arr).toHaveLength(2);
+  });
 
-  test('addTask should update the local Storage', () => {});
+  test('The description of the task should be correct', () => {
+    expect(todoList.arr[0].desc).toBe('hello-world');
+  });
 });
 
-//   test('addListener should add an event to form', () => {
-//     document.body.innerHTML = `<form action='#' class='card__form'>
-//   <input
-//     name='newtask'
-//     id='newtask'
-//     class='card__add-task'
-//     type='text'
-//     placeholder='Add to your list'
-//     required
-//   />
-//   <button class='card__submit' type='submit'>
-//     <i class='fas fa-plus'></i>
-//   </button>
-// </form>;`;
-//   });
+// describe('Remove items from the list', () => {
+//   test('Item should be removed from the array', () => {
+//     expect(listTest).toHaveLength(1);
+//   })
+// });
