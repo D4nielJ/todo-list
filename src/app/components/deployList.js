@@ -10,6 +10,7 @@ export default function deployList(todoList) {
   startTarget.classList.add('todo-list__start');
   ul.appendChild(startTarget);
 
+
   if (listArr.length === 0) {
     const div = document.createElement('div');
     div.classList.add('todo-list__empty');
