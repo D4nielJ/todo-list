@@ -5,6 +5,7 @@
 
 import todoList from '../../utils/todoList.js';
 import addTask from '../addTask.js';
+import deleteTask from '../deleteTask.js';
 jest.mock('../../utils/resetEvents.js');
 
 describe('Add items to the list', () => {
@@ -31,15 +32,14 @@ describe('Add items to the list', () => {
     // Act
     addTask.addListener();
     form.dispatchEvent(event);
-    form.dispatchEvent(event);
     
     // Assert
     const listTest = document.querySelectorAll('li');
-    expect(listTest).toHaveLength(3);
+    expect(listTest).toHaveLength(2);
   });
 
   test('addTask should add an item to the array', () => {
-    expect(todoList.arr).toHaveLength(2);
+    expect(todoList.arr).toHaveLength(1);
   });
 
   test('The description of the task should be correct', () => {
@@ -47,8 +47,6 @@ describe('Add items to the list', () => {
   });
 });
 
-// describe('Remove items from the list', () => {
-//   test('Item should be removed from the array', () => {
-//     expect(listTest).toHaveLength(1);
-//   })
-// });
+describe('Remove items from the list', () => {
+ 
+});
