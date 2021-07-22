@@ -23,6 +23,12 @@ Application development for academic purposes.
 - `git clone https://github.com/D4nielJ/todo-list.git`
 - `npm install`
 - `npm run start`
+
+**Test the project**
+
+Test the project with Jest
+
+- `npm run test`
   
 ## Authors
 
