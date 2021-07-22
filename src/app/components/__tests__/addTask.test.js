@@ -2,10 +2,10 @@
  * @jest-environment jsdom
  */
 
-
 import todoList from '../../utils/todoList.js';
 import addTask from '../addTask.js';
 import deleteTask from '../deleteTask.js';
+
 jest.mock('../../utils/resetEvents.js');
 
 describe('Add items to the list', () => {
@@ -28,11 +28,11 @@ describe('Add items to the list', () => {
     const event = document.createEvent('HTMLEvents');
     event.initEvent('submit', true, true);
     event.eventName = 'submit';
-    
+
     // Act
     addTask.addListener();
     form.dispatchEvent(event);
-    
+
     // Assert
     const listTest = document.querySelectorAll('li');
     expect(listTest).toHaveLength(2);
@@ -60,7 +60,7 @@ describe('Remove items from the list', () => {
     // Assert
     const listTest = document.querySelectorAll('li');
     expect(listTest).toHaveLength(1);
-  })
+  });
   test('deleteTask should remove an item from the array', () => {
     expect(todoList.arr).toHaveLength(0);
   });

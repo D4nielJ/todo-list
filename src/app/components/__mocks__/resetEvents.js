@@ -1,3 +1,3 @@
 export default function resetEvents() {
-  return;
+  return undefined;
 }
