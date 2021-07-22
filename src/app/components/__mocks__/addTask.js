@@ -4,9 +4,8 @@ import deployList from '../deployList.js';
 /* eslint-enable */
 
 class AddTask {
-
-  addTask = (description) => {
-    todoList.addTask(description);
+  addTask = (description, completed = false) => {
+    todoList.addTask(description, completed);
     deployList(todoList);
   };
 }
