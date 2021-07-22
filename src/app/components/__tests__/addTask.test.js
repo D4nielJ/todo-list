@@ -48,5 +48,20 @@ describe('Add items to the list', () => {
 });
 
 describe('Remove items from the list', () => {
- 
+  test('Item should be removed from the array', () => {
+    // Arrange
+    const deleteButton = document.querySelector('.todo-list__delete');
+    const event = document.createEvent('HTMLEvents');
+    event.initEvent('click', true, true);
+    event.eventName = 'delete';
+    // Act
+    deleteTask.addListener();
+    deleteButton.dispatchEvent(event);
+    // Assert
+    const listTest = document.querySelectorAll('li');
+    expect(listTest).toHaveLength(1);
+  })
+  test('deleteTask should remove an item from the array', () => {
+    expect(todoList.arr).toHaveLength(0);
+  });
 });
