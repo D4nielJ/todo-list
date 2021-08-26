@@ -1,4 +1,4 @@
-# Microverse Template using Webpack
+# Todo List Web App
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 ![](https://img.shields.io/badge/Academic-blue)
